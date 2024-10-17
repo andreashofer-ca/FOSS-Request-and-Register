@@ -1,6 +1,6 @@
 name: FOSS Component Check and Register Workflow
 
-# Trigger the workflow on push and manual dispatch
+# Trigger the workflow on API call
 on:
   workflow_dispatch:
     inputs:
@@ -16,7 +16,7 @@ jobs:
     steps:
       # Requesting the component
       - name: Request component
-        run: echo "Requesting component: ${{ github.event.inputs.component_name }}"
+        run: echo "Requesting component:${{ github.event.inputs.component_name }}"
 
       # Checking if the component exists in JFrog Artifactory
       - name: Check if component exists in JFrog Artifactory
