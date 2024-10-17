@@ -6,7 +6,7 @@
   <title>FOSS Request and Register Workflow</title>
 </head>
 <body>
-  <h1>Trigger GitHub Workflow</h1>
+  <h1>FOSS Request and Register Workflow</h1>
   <!-- Form to input the component name -->
   <form id="workflowForm">
     <label for="componentName">Component Name:</label>
@@ -25,7 +25,7 @@
         method: 'POST',
         headers: {
           'Accept': 'application/vnd.github.v3+json',
-          'Authorization': 'Bearer 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', // Replace with your personal access token
+          'Authorization': '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', // Replace with your personal access token
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
