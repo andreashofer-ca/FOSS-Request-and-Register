@@ -1,4 +1,4 @@
-name: Component Check and Register Workflow
+name: FOSS Component Check and Register Workflow
 
 # Trigger the workflow on push and manual dispatch
 on:
