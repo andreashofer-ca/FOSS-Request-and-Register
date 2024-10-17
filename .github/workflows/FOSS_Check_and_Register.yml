@@ -33,7 +33,7 @@ jobs:
   fossa-scan:
     runs-on: ubuntu-latest
     needs: request-component
-    # if: env.component_exists == 'false'
+    # DEBUG if: env.component_exists == 'false'
 
     steps:
       # Checkout the code for the FOSSA scan
@@ -50,7 +50,7 @@ jobs:
   register-component:
     runs-on: ubuntu-latest
     needs: fossa-scan
-    if: steps.fossa.outputs.status == 'pass'
+    # DEBUG if: steps.fossa.outputs.status == 'pass'
 
     steps:
       # Checkout the code for registration
