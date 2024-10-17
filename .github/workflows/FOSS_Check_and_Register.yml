@@ -33,7 +33,7 @@ jobs:
   fossa-scan:
     runs-on: ubuntu-latest
     needs: request-component
-    if: env.component_exists == 'false'
+    # if: env.component_exists == 'false'
 
     steps:
       # Checkout the code for the FOSSA scan
