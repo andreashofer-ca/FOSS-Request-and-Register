@@ -5,7 +5,8 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [dispatch-event]
-      inputs:
+
+    inputs:
       component_name:
       description: 'Name of the component'
       required: true
