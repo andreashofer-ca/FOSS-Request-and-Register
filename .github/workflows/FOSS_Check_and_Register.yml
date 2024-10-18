@@ -18,7 +18,7 @@ jobs:
     steps:
       # Requesting the component
       - name: Request component
-        run: echo "Requesting component:${{ github.event.inputs.component_name }}"
+      # DEBUG   run: echo "Requesting component:${{ github.event.inputs.component_name }}"
 
       # Checking if the component exists in JFrog Artifactory
       - name: Check if component exists in JFrog Artifactory
