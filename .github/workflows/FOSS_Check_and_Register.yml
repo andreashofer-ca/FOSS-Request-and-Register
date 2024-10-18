@@ -3,8 +3,6 @@ name: FOSS Component Check and Register Workflow
 # Trigger the workflow on API call
 on:
   workflow_dispatch:
-  # repository_dispatch:
-  # types: [dispatch-event]
     inputs:
       component_name:
       description: 'Name of the component'
