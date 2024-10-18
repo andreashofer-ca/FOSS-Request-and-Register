@@ -1,5 +1,4 @@
 # This is the workflow that is manually triggered
-
 name: FOSS Component Check and Register Workflow
 
 # Trigger the workflow on API call
