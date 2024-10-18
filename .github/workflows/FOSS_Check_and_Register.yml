@@ -45,7 +45,8 @@ jobs:
 
       # Running FOSSA scan
       - name: Check with FOSSA
-        uses: fossas/fossa-action@v1.4.0
+        uses: actions/checkout@v4
+      #  uses: fossas/fossa-action@v1.4.0
       #  with:
       #  api-key: ${{ secrets.FOSSA_API_KEY }}
       #  id: fossa
