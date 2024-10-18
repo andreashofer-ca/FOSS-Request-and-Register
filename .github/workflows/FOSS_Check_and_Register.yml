@@ -63,6 +63,7 @@ jobs:
 
       # Registering the component with JFrog Artifactory
       - name: Register with JFrog Artifactory
+        uses: actions/checkout@v4
       #  env:
       #    JFROG_USERNAME: ${{ secrets.JFROG_USERNAME }}
       #    JFROG_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
