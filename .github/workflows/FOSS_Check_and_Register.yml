@@ -3,7 +3,10 @@ name: FOSS Component Check and Register Workflow
 # Trigger the workflow on API call
 on:
   workflow_dispatch:
-    inputs:
+  repository_dispatch:
+    types: [dispatch-event]
+
+      inputs:
       component_name:
       description: 'Name of the component'
       required: true
@@ -33,7 +36,7 @@ jobs:
   fossa-scan:
     runs-on: ubuntu-latest
     needs: request-component
-    # DEBUG if: env.component_exists == 'false'
+    if: env.component_exists == 'false'
 
     steps:
       # Checkout the code for the FOSSA scan
