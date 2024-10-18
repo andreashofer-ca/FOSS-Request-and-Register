@@ -18,10 +18,12 @@ jobs:
     steps:
       # Requesting the component
       - name: Request component
+        uses: actions/checkout@v4
       # run: echo "Requesting component:${{ github.event.inputs.component_name }}"
 
       # Checking if the component exists in JFrog Artifactory
       - name: Check if component exists in JFrog Artifactory
+        uses: actions/checkout@v4
         id: check-artifactory
       #  run: |
       #    if curl -f -u ${{ secrets.JFROG_USERNAME }}:${{ secrets.JFROG_PASSWORD }} https://your.jfrog.io/artifactory/your-repo/${{ github.event.inputs.component_name }}; then
@@ -75,4 +77,5 @@ jobs:
     steps:
       # Handling the exception process
       - name: Exception process
+        uses: actions/checkout@v4
       # run: echo "Component did not pass FOSSA checks. Exception process is necessary."
