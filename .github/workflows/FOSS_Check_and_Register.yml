@@ -4,11 +4,12 @@ name: FOSS Component Check and Register Workflow
 on:
   repository_dispatch:
     types: [start-event]
-    inputs:
-      component_name:
-        description: 'Name of the component'
-        required: true
-        default: 'default-component-name'
+
+# DEBUG  inputs:
+# DEBUG   component_name:
+# DEBUG  description: 'Name of the component'
+# DEBUG    required: true
+# DEBUG    default: 'default-component-name'
 
 jobs:
   request-component:
@@ -22,14 +23,14 @@ jobs:
       # Checking if the component exists in JFrog Artifactory
       - name: Check if component exists in JFrog Artifactory
         id: check-artifactory
-        run: |
-          if curl -f -u ${{ secrets.JFROG_USERNAME }}:${{ secrets.JFROG_PASSWORD }} https://your.jfrog.io/artifactory/your-repo/${{ github.event.inputs.component_name }}; then
+      # DEBUG   run: |
+      # DEBUG     if curl -f -u ${{ secrets.JFROG_USERNAME }}:${{ secrets.JFROG_PASSWORD }} https://your.jfrog.io/artifactory/your-repo/${{ github.event.inputs.component_name }}; then
             echo "Component exists."
             echo "component_exists=true" >> $GITHUB_ENV
-          else
+      # DEBUG     else
             echo "Component does not exist."
             echo "component_exists=false" >> $GITHUB_ENV
-          fi
+      # DEBUG     fi
 
   fossa-scan:
     runs-on: ubuntu-latest
