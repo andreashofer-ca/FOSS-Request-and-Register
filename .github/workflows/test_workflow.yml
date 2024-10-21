@@ -16,5 +16,7 @@ jobs:
 
   # This workflow performs FOSSA scan
   call-fossa-workflow:
+  runs-on: ubuntu-latest
+  needs: [request-component]
     # call workflow
     uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/fossa_scan.yml@main
