@@ -24,7 +24,7 @@ jobs:
   # This workflow checks JFrog Artifactory
   call-artifactory-workflow:
     #call workflow
-      uses: https://github.com/andreashofer-ca/FOSS-Request-and-Register/.github/workflows/check_artifactory.yml@main
+      uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/check_artifactory.yml@main
   call-fossa-workflow:
     #call workflow
-      uses: https://github.com/andreashofer-ca/FOSS-Request-and-Register/.github/workflows/fossa_scan.yml@main
+      uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/fossa_scan.yml@main
