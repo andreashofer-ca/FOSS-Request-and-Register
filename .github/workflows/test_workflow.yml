@@ -11,11 +11,11 @@ on:
 jobs:
   # This workflow checks JFrog Artifactory
   call-artifactory-workflow
-    # call workflow
+    call workflow
       uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/check_artifactory.yml@main
 
   # This workflow performs FOSSA scan
   call-fossa-workflow:
   needs: call-artifactory-workflow:
-    # call workflow
+    call workflow
       uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/fossa_scan.yml@main
