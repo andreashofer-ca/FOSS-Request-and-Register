@@ -11,7 +11,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow checks JFrog Artifactory
-  call-artifactory-workflow:
+  call-artifactory-workflow
     #call workflow
       uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/check_artifactory.yml@main
 
