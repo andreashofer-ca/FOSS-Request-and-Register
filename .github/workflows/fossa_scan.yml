@@ -1,0 +1,26 @@
+# Perform FOSSA scan for component
+
+name: Fossa Scan
+
+on:
+  workflow_call:
+
+jobs:
+  fossa-scan:
+    runs-on: ubuntu-latest
+    # if: env.component_exists == 'false'
+
+    steps:
+      # Checkout the code for the FOSSA scan
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Running FOSSA scan
+      - name: Check with FOSSA
+        uses: actions/checkout@v4
+      #  uses: fossas/fossa-action@v1.4.0
+      #  with:
+      #  api-key: ${{ secrets.FOSSA_API_KEY }}
+      #  id: fossa
+
+  
