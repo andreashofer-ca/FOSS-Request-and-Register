@@ -20,6 +20,10 @@ jobs:
     # needs: [request-component]
       # call workflow
       uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/fossa_scan.yml@main
+
   print-github-action-vars:
     runs-on: ubuntu-latest
-      run: echo "$GITHUB_CONTEXT"
+    steps:
+     - uses: actions/checkout@v4
+     - name: Run a one-line script
+       run: echo "$GITHUB_CONTEXT"
