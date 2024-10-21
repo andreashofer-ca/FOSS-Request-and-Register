@@ -16,6 +16,5 @@ jobs:
 
   # This workflow performs FOSSA scan
   call-fossa-workflow:
-  needs: call-artifactory-workflow:
     # call workflow
     uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/fossa_scan.yml@main
