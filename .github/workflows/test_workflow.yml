@@ -7,17 +7,6 @@ name: Test workflow
 on:
   workflow_call:
   workflow_dispatch:
-    # Inputs the workflow accepts.
-    inputs:
-      name:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person to greet'
-        # Default value if no value is explicitly provided
-        default: 'World'
-        # Input has to be provided for the workflow to run
-        required: true
-        # The data type of the input
-        type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,6 +14,9 @@ jobs:
   call-artifactory-workflow:
     #call workflow
       uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/check_artifactory.yml@main
+
+  # This workflow performs FOSSA scan
   call-fossa-workflow:
+  needs: call-artifactory-workflow:
     #call workflow
       uses: andreashofer-ca/FOSS-Request-and-Register/.github/workflows/fossa_scan.yml@main
